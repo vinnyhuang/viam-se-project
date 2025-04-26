@@ -1,12 +1,41 @@
-# React + Vite
+# Scavenger Hunt Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based scavenger hunt game that uses computer vision to detect objects through a webcam.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Create a `.env` file in the root directory with your Viam credentials:
+   ```
+   VITE_VIAM_API_KEY=your_api_key
+   VITE_VIAM_API_KEY_ID=your_api_key_id
+   VITE_VIAM_ADDRESS=your_viam_address
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Object Lists
+
+The game uses two object lists:
+- `household_objects.txt` - Common household items
+- `scavenger_custom_objects.txt` - Custom objects for the game
+
+You can add more objects to `scavenger_custom_objects.txt` to expand the game's vocabulary.
+
+## VIAM Components / Services
+
+Requires you have configured:
+- `cam` Camera Component
+- `myPeopleDetector` Vision / MLModel service
+  - Should use `EfficientDet-COCO`
+- `scavengerCustomerDetector` Vision / MLModel service
+  - Should use MLModel trained on custom data matching the objects in `scavenger_custom_objects.txt`
