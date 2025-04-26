@@ -1,0 +1,13 @@
+{
+  "module_name": "hello-world",
+  "namespace": "vinnyhuang",
+  "language": "python",
+  "resource_type": "component",
+  "resource_subtype": "camera",
+  "model_name": "hello-camera",
+  "enable_cloud_build": false,
+  "initialize_git": false,
+  "generator_version": "0.1.0",
+  "generated_on": "2025-04-25T20:58:57.767404Z",
+  "module_readme_link": "README.md"
+}

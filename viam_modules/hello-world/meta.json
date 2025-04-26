@@ -1,0 +1,34 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "vinnyhuang:hello-world",
+  "visibility": "private",
+  "url": "",
+  "description": "Example camera and sensor components: hello-camera and hello-sensor",
+  "models": [
+    {
+      "api": "rdk:component:camera",
+      "model": "vinnyhuang:hello-world:hello-camera",
+      "short_description": "A camera that returns an image.",
+      "markdown_link": "README.md#model-vinnyhuanghello-worldhello-camera"
+    },
+    {
+      "api": "rdk:component:sensor",
+      "model": "vinnyhuang:hello-world:hello-sensor",
+      "short_description": "A sensor that returns a random number.",
+      "markdown_link": "README.md#model-vinnyhuanghello-worldhello-sensor"
+    }
+  ],
+  "applications": null,
+  "markdown_link": "README.md",
+  "entrypoint": "./run.sh",
+  "first_run": "",
+  "build": {
+    "build": "./build.sh",
+    "setup": "./setup.sh",
+    "path": "dist/archive.tar.gz",
+    "arch": [
+      "linux/amd64",
+      "linux/arm64"
+    ]
+  }
+}
